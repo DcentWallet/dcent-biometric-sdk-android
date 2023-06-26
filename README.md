@@ -41,7 +41,7 @@ dependencies {
 
 ## Usage
 
-Refer to the [`sample-app`](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/tree/master/sample-app) directory. There is an android project using our android sdk.
+Refer to the [`sample-app`](/sample-app) directory. There is an android project using our android sdk.
 
 > **All instance method should be called from a background thread because it can take a long time!**
 
@@ -95,7 +95,7 @@ None
 
 **Returns**
 
-[`DeviceInfo`](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/dcent-biometric/src/main/java/com/dcentwallet/manager/comm/DeviceInfo.java) - the current connected D'CENT biometric wallet device Information
+[`DeviceInfo`](./doc/DeviceInfo.md) - the current connected D'CENT biometric wallet device Information
 
 **Example**
 
@@ -133,7 +133,7 @@ None
 
 **Returns**
 
-[`List<Account>`](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/dcent-biometric/src/main/java/com/dcentwallet/manager/comm/Account.java) - current account list in D'CENT biometric wallet.
+[`List<Account>`](./doc/Account.md) - current account list in D'CENT biometric wallet.
 
 **Example**
 
@@ -181,7 +181,7 @@ If the account of the specified key path is already exist, the `syncAccount()` m
 
 ### getAddress
 
-Get the address of [`CoinType`](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/dcent-biometric/src/main/java/com/dcentwallet/manager/comm/CoinType.java) and BIP44 Key Path.
+Get the address of `CoinType` and BIP44 Key Path.
 
 **Parameters**
 
@@ -241,7 +241,7 @@ Get the sign value of "EVM" message sign(personal_sign & signTypedData).
 | Parameter   | Type                                                                                                                | Description                                                                                                                                                                   |
 | ----------- | ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | coinType    | `CoinType`                                                                                                        | coin type.                                                                                                                                                                    |
-| transaction | [EthMesageSignData](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/EthMesageSignData.md) | ethereum message sign data parameters.                                                                                                                                        |
+| transaction | [EthMesageSignData](./doc/EthMesageSignData.md) | ethereum message sign data parameters.                                                                                                                                        |
 | command     | `String`                                                                                                          | data sign command.(`"msg_sign"` \| `"sign_data"`) <br /> - `"msg_sign"` for personal_sign or 'eth_sign' of EVM<br />- `"sign_data"` for signTypedData(EIP-721) of EVM |
 
 **Returns**
@@ -309,7 +309,7 @@ Depending on the coin type, the function for signing transaction and the transac
 | Parameter   | Type                                                                                                                                     | Description                     |
 | :---------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
 | coinType    | `CoinType`                                                                                                                             | bitcoin coin type.              |
-| transaction | [BitCoinTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/BitcoinTransaction.md#bitcointransaction) | bitcoin transaction parameters. |
+| transaction | [BitCoinTransaction](./doc/BitcoinTransaction.md#bitcointransaction) | bitcoin transaction parameters. |
 
 **Returns**
 
@@ -367,7 +367,7 @@ String response = mDcentManager.getBitcoinSignedTransaction(CoinType.BITCOIN, bi
 | Parameter   | Type                                                                                                                    | Description                      |
 | :---------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | coinType    | `CoinType`                                                                                                            | ethereum coin type.              |
-| transaction | [EtheruemTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/EthereumTransaction.md) | ethereum transaction parameters. |
+| transaction | [EtheruemTransaction](./doc/EthereumTransaction.md) | ethereum transaction parameters. |
 
 **Returns**
 
@@ -409,7 +409,7 @@ String response = mDcentmanager.getEthereumSignedTransaction(CoinType.ETHEREUM, 
 | Parameter   | Type                                                                                                                | Description                     |
 | :---------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
 | coinType    | `CoinType`                                                                                                        | klaytn coin type.               |
-| transaction | [KlaytnTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/KlaytnTransaction.md) | klaytn transaction parameters. |
+| transaction | [KlaytnTransaction](./doc/KlaytnTransaction.md) | klaytn transaction parameters. |
 
 **Returns**
 
@@ -459,7 +459,7 @@ String response = mDcentmanager.getKlaytnSignedTransaction(CoinType.KLAYTN, klay
 | Parameter   | Type                                                                                                              | Description                   |
 | :---------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------- |
 | coinType    | `CoinType`                                                                                                      | erc20 type.                   |
-| transaction | [TokenTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/TokenTransaction.md) | token transaction parameters. |
+| transaction | [TokenTransaction](./doc/TokenTransaction.md) | token transaction parameters. |
 
 **Returns**
 
@@ -505,7 +505,7 @@ String response = mDcentmanager.getTokenSignedTransaction(CoinType.ERC20, erc20t
 | Parameter   | Type                                                                                                          | Description                 |
 | :---------- | ------------------------------------------------------------------------------------------------------------- | --------------------------- |
 | coinType    | `CoinType`                                                                                                  | xrp coin type.              |
-| transaction | [XrpTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/XrpTransaction.md) | xrp transaction parameters. |
+| transaction | [XrpTransaction](./doc/XrpTransaction.md) | xrp transaction parameters. |
 
 **Returns**
 
@@ -544,7 +544,7 @@ String response = mDcentManager.getXrpSignedTransaction(CoinType.XRP, xrpTransac
 | Parameter   | Type                                                                                                          | Description                 |
 | :---------- | ------------------------------------------------------------------------------------------------------------- | --------------------------- |
 | coinType    | `CoinType`                                                                                                  | xrp coin type.              |
-| transaction | [XrpTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/XrpTransaction.md) | xrp transaction parameters. |
+| transaction | [XrpTransaction](./doc/XrpTransaction.md) | xrp transaction parameters. |
 
 **Returns**
 
@@ -579,7 +579,7 @@ String res_accountId = response.get("accountId");
 | Parameter   | Type                                                                                                                 | Description                    |
 | :---------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
 | coinType    | `CoinType`                                                                                                         | binance coin type.             |
-| transaction | [BinaceTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/BinanceTransaction.md) | binace transaction parameters. |
+| transaction | [BinaceTransaction](./doc/BinanceTransaction.md) | binace transaction parameters. |
 
 **Returns**
 
@@ -618,7 +618,7 @@ String response = mDcentmanager.getDcentManager().getBinanceSignedTransaction(Co
 | Parameter   | Type                                                                                                                  | Description                     |
 | :---------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
 | coinType    | `CoinType`                                                                                                          | stellar coin type.              |
-| transaction | [StellarTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/StellarTransaction.md) | stellar transaction parameters. |
+| transaction | [StellarTransaction](./doc/StellarTransaction.md) | stellar transaction parameters. |
 
 **Returns**
 
@@ -656,7 +656,7 @@ String response = mDcentmanager.getStellarSignedTransaction(CoinType.STELLAR, st
 | Parameter   | Type                                                                                                            | Description                  |
 | :---------- | --------------------------------------------------------------------------------------------------------------- | ---------------------------- |
 | coinType    | `CoinType`                                                                                                    | tron coin type.              |
-| transaction | [TronTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/TronTransaction.md) | tron transaction parameters. |
+| transaction | [TronTransaction](./doc/TronTransaction.md) | tron transaction parameters. |
 
 **Returns**
 
@@ -693,7 +693,7 @@ String response = mDcentmanager.getTronSignedTransaction(CoinType.TRON, tronTran
 | Parameter   | Type                                                                                                                 | Description                  |
 | :---------- | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
 | coinType    | `CoinType`                                                                                                         | cardano coin type.           |
-| transaction | [CardaonTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/CardanoTransacion.md) | tron transaction parameters. |
+| transaction | [CardaonTransaction](./doc/CardanoTransacion.md) | tron transaction parameters. |
 
 **Returns**
 
@@ -731,7 +731,7 @@ String response = mDcentmanager.getCardanoSignedTransaction(CoinType.CARDANO, ca
 | Parameter   | Type                                                                                                                | Description                    |
 | :---------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
 | coinType    | `CoinType`                                                                                                        | hedera coin type.              |
-| transaction | [HederaTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/HederaTransaction.md) | hedera transaction parameters. |
+| transaction | [HederaTransaction](./doc/HederaTransaction.md) | hedera transaction parameters. |
 
 **Returns**
 
@@ -771,7 +771,7 @@ String response = mDcentmanager.getHederaSignedTransaction(CoinType.HEDERA, hede
 | Parameter   | Type                                                                                                                | Description                    |
 | :---------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
 | coinType    | `CoinType`                                                                                                        | stacks coin type.              |
-| transaction | [StacksTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/StacksTransaction.md) | stacks transaction parameters. |
+| transaction | [StacksTransaction](./doc/StacksTransaction.md) | stacks transaction parameters. |
 
 **Returns**
 
@@ -814,7 +814,7 @@ String response = mDcentmanager.getStacksSignedTransaction(CoinType.SRC20, stack
 | Parameter   | Type                                                                                                                | Description                    |
 | :---------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
 | coinType    | `CoinType`                                                                                                        | solana coin type.              |
-| transaction | [SolanaTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/SolanaTransaction.md) | solana transaction parameters. |
+| transaction | [SolanaTransaction](./doc/SolanaTransaction.md) | solana transaction parameters. |
 
 **Returns**
 
@@ -854,7 +854,7 @@ String response = mDcentmanager.getSolanaSignedTransaction(CoinType.SPL_TOKEN, s
 | Parameter   | Type                                                                                                                  | Description                     |
 | :---------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
 | coinType    | `CoinType`                                                                                                          | conflux coin type.              |
-| transaction | [ConfluxTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/ConfluxTransaction.md) | conflux transaction parameters. |
+| transaction | [ConfluxTransaction](./doc/ConfluxTransaction.md) | conflux transaction parameters. |
 
 **Returns**
 
@@ -897,7 +897,7 @@ String response = mDcentmanager.getConfluxSignedTransaction(CoinType.CONFLUX, co
 | Parameter   | Type                                                                                                                            | Description                           |
 | :---------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
 | coinType    | `CoinType`                                                                                                                    | conflux crc20 coin type.              |
-| transaction | [ConfluxCrc20Transaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/ConfluxCrc20Transaction.md) | conflux crc20 transaction parameters. |
+| transaction | [ConfluxCrc20Transaction](./doc/ConfluxCrc20Transaction.md) | conflux crc20 transaction parameters. |
 
 **Returns**
 
@@ -946,7 +946,7 @@ String response = mDcentmanager.getConfluxCrc20SignedTransaction(CoinType.CFX_CR
 | Parameter   | Type                                                                                                                    | Description                      |
 | :---------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | coinType    | `CoinType`                                                                                                            | polkadot coin type.              |
-| transaction | [PolkadotTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/PolkadotTransaction.md) | polkadot transaction parameters. |
+| transaction | [PolkadotTransaction](./doc/PolkadotTransaction.md) | polkadot transaction parameters. |
 
 **Returns**
 
@@ -985,7 +985,7 @@ String response = mDcentmanager.getPolkadotSignedTransaction(CoinType.POLKADOT, 
 | Parameter   | Type                                                                                                                | Description                     |
 | :---------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
 | coinType    | `CoinType`                                                                                                        | cosmos coin type.               |
-| transaction | [CosmosTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/CosmosTransaction.md) | cosmos transaction parameters. |
+| transaction | [CosmosTransaction](./doc/CosmosTransaction.md) | cosmos transaction parameters. |
 
 **Returns**
 
@@ -1027,7 +1027,7 @@ String response = mDcentmanager.getCosmosSignedTransaction(CoinType.COSMOS, cosm
 | Parameter   | Type                                                                                                              | Description                   |
 | :---------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------- |
 | coinType    | `CoinType`                                                                                                      | tezos coin type.              |
-| transaction | [TezosTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/TezosTransaction.md) | tezos transaction parameters. |
+| transaction | [TezosTransaction](./doc/TezosTransaction.md) | tezos transaction parameters. |
 
 **Returns**
 
@@ -1067,7 +1067,7 @@ String response = mDcentmanager.getTezosSignedTransaction(CoinType.TEZOS, tezosT
 | Parameter   | Type                                                                                                                  | Description                      |
 | :---------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
 | coinType    | `CoinType`                                                                                                          | vechain coin type.               |
-| transaction | [VechainTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/VechainTransaction.md) | vechain transaction parameters. |
+| transaction | [VechainTransaction](./doc/VechainTransaction.md) | vechain transaction parameters. |
 
 **Returns**
 
@@ -1107,7 +1107,7 @@ String response = mDcentmanager.getVechainSignedTransaction(CoinType.VECHAIN, ve
 | Parameter   | Type                                                                                                            | Description                  |
 | :---------- | --------------------------------------------------------------------------------------------------------------- | ---------------------------- |
 | coinType    | `CoinType`                                                                                                    | near coin type.              |
-| transaction | [NearTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/NearTransaction.md) | near transaction parameters. |
+| transaction | [NearTransaction](./doc/NearTransaction.md) | near transaction parameters. |
 
 **Returns**
 
@@ -1150,7 +1150,7 @@ String response = mDcentmanager.getNearSignedTransaction(CoinType.NEAR, nearTran
 | Parameter   | Type                                                                                                              | Description                   |
 | :---------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------- |
 | coinType    | `CoinType`                                                                                                      | havah coin type.              |
-| transaction | [HavahTransaction](https://github.com/IotrustGitHub/dcent-biometric-sdk-android/blob/master/doc/HavahTransaction.md) | havah transaction parameters. |
+| transaction | [HavahTransaction](./doc/HavahTransaction.md) | havah transaction parameters. |
 
 **Returns**
 
