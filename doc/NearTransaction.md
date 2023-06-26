@@ -1,0 +1,13 @@
+# `NearTransaction`
+
+#### Parameter
+
+| Name        | Type             | Description                                                                                                                                                                                                                                                                 |
+| ----------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| hdKeyPath   | `Bip44KeyPath` | sign key path for near transaction                                                                                                                                                                                                                                         |
+| sigHash     | `String`       | transaction that has not been signed of near transaction                                                                                                                                                                                                                   |
+| decimals    | `int`          | transaction decimals of near transaction                                                                                                                                                                                                                                   |
+| symbol      | `String`       | transaction symbol of near transaction                                                                                                                                                                                                                                      |
+| fee         | `String`       | transaction fee of near transaction<br />* Fee value is configured in near(NEAR) unit.                                                                                                                                                                                    |
+| nonce       | `String`       | (optional)transaction nonce of near transaction                                                                                                                                                                                                                            |
+| optionParam | `String`       | (optional)hexadecimal value of the token method type is used only in near token.<br />- '02' : Function call(ft_transfer)<br />- '~04' : Stake~ (**The method will be supported later.)**<br />- ~'08' : Delegate~ (**The method will be supported later)** |

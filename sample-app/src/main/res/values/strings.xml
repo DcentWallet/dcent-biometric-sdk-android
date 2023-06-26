@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">DcentSdkSample</string>
+    <string name="dcent_sdk_test">DCENT SDK Test</string>
+
+    <string name="list_opt_showConnectingDevice">Show Connecting Device</string>
+    <string name="list_opt_getDeviceInfo">Get Device Info</string>
+    <string name="list_opt_setDeviceLabel">Set Device Label</string>
+    <string name="list_opt_addAccount_bitcoin">Add Account (BITCOIN)</string>
+    <string name="list_opt_addAccount_ethereum">Add Account (ETHEREUM)</string>
+    <string name="list_opt_getAccountInfo">Get Account Info</string>
+    <string name="list_opt_syncAccount">Sync Account</string>
+    <string name="list_opt_getAddress_bitcoin">Get Address (BITCOIN)</string>
+    <string name="list_opt_getAddress_tezos">Get Address (TEZOS)</string>
+    <string name="list_opt_getAddress_coreum">Get Address (COREUM)</string>
+    <string name="list_opt_bitcoinTransaction">BitCoin Transaction</string>
+    <string name="list_opt_xrpTransaction">XRP Transaction</string>
+    <string name="list_opt_ethereumTransaction">Ethereum Transaction</string>
+    <string name="list_opt_erc20Transaction">ERC20 Transaction</string>
+    <string name="list_opt_klaytnTransaction">Klaytn Transaction</string>
+    <string name="list_opt_rskTransaction">RSK Transaction</string>
+    <string name="list_opt_rrc20Transaction">RRC20 Transaction</string>
+    <string name="list_opt_monacoinTransaction">MonaCoin Transaction</string>
+    <string name="list_opt_binanceTransaction">Binance Transaction</string>
+    <string name="list_opt_stellarTransaction">Stellar Transaction</string>
+    <string name="list_opt_tronTransaction">Tron Transaction</string>
+    <string name="list_opt_hederaTransaction">Hedera Transaction</string>
+    <string name="list_opt_polkadotTransaction">Polkadot Transaction</string>
+    <string name="list_opt_cosmosTransaction">Cosmos Transaction</string>
+    <string name="list_opt_coreumTransaction">Coreum Transaction</string>
+    <string name="list_opt_tezosTransaction">Tezos Transaction</string>
+    <string name="list_opt_vechainTransaction">Vechain Transaction</string>
+    <string name="list_opt_nearTransaction">Near Transaction</string>
+    <string name="list_opt_nearTokenTransaction">Near Token Transaction</string>
+    <string name="list_opt_havahTransaction">Havah Transaction</string>
+    <string name="list_opt_hsp20Transaction">HSP20 Transaction</string>
+    <string name="list_opt_ethMsgSign">Eth Message Sign</string>
+    <string name="list_opt_xrpUnsignedTransaction">XRP Transaction with Unsigned Tx</string>
+    <string name="list_opt_getXPUB">Get XPUB</string>
+
+    <string name="klaytn_test">Klaytn Test List</string>
+
+    <string name="list_opt_Klaytn_LegacyTransaction">Legacy Transaction</string>
+    <string name="list_opt_Klaytn_ValueTransaction">Value Transfer</string>
+    <string name="list_opt_Klaytn_ValueTransaction_D">Value Transfer(D)</string>
+    <string name="list_opt_Klaytn_ValueTransaction_PD">Value Transfer(PD)</string>
+    <string name="list_opt_Klaytn_ValueMemoTx">Value Memo Tx</string>
+    <string name="list_opt_Klaytn_ValueMemoTx_D">Value Memo Tx(D)</string>
+    <string name="list_opt_Klaytn_ValueMemoTx_PD">Value Memo Tx(PD)</string>
+    <string name="list_opt_Klaytn_CancelTx">Cancel Tx</string>
+    <string name="list_opt_Klaytn_CancelTx_D">Cancel Tx(D)</string>
+    <string name="list_opt_Klaytn_CancelTx_PD">Cancel Tx(PD)</string>
+    <string name="list_opt_Klaytn_KRC20Tx">KRC20 Tx</string>
+    <string name="list_opt_Klaytn_KRC20Tx_D">KRC20 Tx(D)</string>
+    <string name="list_opt_Klaytn_KRC20Tx_PD">KRC20 Tx(PD)</string>
+</resources>

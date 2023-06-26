@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.DcentSdkTestFragment"
+    android:layout_margin="20px">
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test Name"
+            android:textSize="40px"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="20px" />
+
+        <TextView
+            android:id="@+id/reqInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="40px"
+            android:textSize="40px"
+            android:textColor="@color/black"
+            android:background="#eeeeee"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Response"
+            android:textSize="40px"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="20px" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="600px"
+            android:background="#eeeeee">
+            <TextView
+                android:id="@+id/resInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="40px"/>
+        </ScrollView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Test List"
+            android:textSize="40px"
+            android:layout_marginTop="20px"
+            android:layout_marginBottom="20px" />
+
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
+    </LinearLayout>
+</FrameLayout>
