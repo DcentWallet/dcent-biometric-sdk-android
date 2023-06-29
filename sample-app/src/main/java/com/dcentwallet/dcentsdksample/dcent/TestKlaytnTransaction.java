@@ -426,7 +426,7 @@ public class TestKlaytnTransaction {
         klaytnTransanction.setOptionAttribute(KlaytnTransaction.TX_TYPE_CANCEL, "0x689dfa2C77335722f333EeA102ba8A5E13d2AD1a", 0);*/
 
         klaytnTransanction = new KlaytnTransaction.Builder()
-                .keyPath(Bip44KeyPath.valueOf("\"m/44'/8217'/0'/0/0"))
+                .keyPath(Bip44KeyPath.valueOf("m/44'/8217'/0'/0/0"))
                 .nonce("2")
                 .gasLimit("50000")
                 .gasPrice("25000000000")
