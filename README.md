@@ -217,7 +217,7 @@ Get a xpub key of BIP44 Key Path or BIP0032 master key
 
 Get the sign value of "EVM" message sign(personal_sign & signTypedData).
 
-**This fuction for :**
+**This function for :**
 
 * `ETHEREUM` (ETH) - ethereum
 * `ETHEREUM_KOVAN` (ETHt) - etheruem kovan
@@ -272,7 +272,7 @@ Depending on the coin type, the function for signing transaction and the transac
 
 #### getBitcoinSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `BITCOIN` (BTC) - bitcoin
 * `BITCOIN_SV` (BSV) - bitcoin sv
@@ -343,7 +343,7 @@ String response = mDcentManager.getBitcoinSignedTransaction(CoinType.BITCOIN, bi
 
 #### getEthereumSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `ETHEREUM` (ETH) - ethereum
 * `ETH_CLASSIC` (ETC) - ethereum classic
@@ -397,7 +397,7 @@ String response = mDcentmanager.getEthereumSignedTransaction(CoinType.ETHEREUM, 
 
 #### getKalytnSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `KLAYTN` (KLAY)
 * `KLAYTN_ERC20` - klaytn token
@@ -435,7 +435,7 @@ String response = mDcentmanager.getKlaytnSignedTransaction(CoinType.KLAYTN, klay
 
 #### getTokenSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `ERC20` - ethereum erc20 token
 * `ETC_ERC20` - ethereum classic erc20 token
@@ -493,7 +493,7 @@ String response = mDcentmanager.getTokenSignedTransaction(CoinType.ERC20, erc20t
 
 #### getXrpSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `XRP` (XRP) - xrpl
 * `XRP_TA` - xrp ta
@@ -532,7 +532,7 @@ String response = mDcentManager.getXrpSignedTransaction(CoinType.XRP, xrpTransac
 
 #### getXRPSignedTransactionWithUnsignedTx
 
-**This fuction for :**
+**This function for :**
 
 * `XRP` (XRP) - xrpl
 * `XRP_TA` - xrp ta
@@ -567,7 +567,7 @@ String res_accountId = response.get("accountId");
 
 #### getBinanceSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `BINANCE` (BNB)
 * `BEP2` - Binance token
@@ -606,7 +606,7 @@ String response = mDcentmanager.getDcentManager().getBinanceSignedTransaction(Co
 
 #### getStellarSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `STELLAR`(XLM)
 * `STELLAR_TA`
@@ -644,7 +644,7 @@ String response = mDcentmanager.getStellarSignedTransaction(CoinType.STELLAR, st
 
 #### getTronSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `TRON` (TRX)
 * `TRC_TOKEN` - TRON Token
@@ -683,7 +683,7 @@ String response = mDcentmanager.getTronSignedTransaction(CoinType.TRON, tronTran
 
 #### getCardanoSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `CARDANO` (ADA)
 * `CARDANO_TESTNET` (ADAt)
@@ -719,7 +719,7 @@ String response = mDcentmanager.getCardanoSignedTransaction(CoinType.CARDANO, ca
 
 #### getHederaSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `HEDERA` (HBAR)
 * `HEDERA_HTS` - hedera token
@@ -759,7 +759,7 @@ String response = mDcentmanager.getHederaSignedTransaction(CoinType.HEDERA, hede
 
 #### getStacksSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `STACKS `(STX)
 * `SIP010` - stacks token
@@ -804,7 +804,7 @@ String response = mDcentmanager.getStacksSignedTransaction(CoinType.SRC20, stack
 
 #### getSolanaSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `SOLANA` (SOL)
 * `SPL_TOKEN` - solana token
@@ -845,7 +845,7 @@ String response = mDcentmanager.getSolanaSignedTransaction(CoinType.SPL_TOKEN, s
 
 #### getConfluxSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `CONFLUX` (CRX)
 
@@ -888,7 +888,7 @@ String response = mDcentmanager.getConfluxSignedTransaction(CoinType.CONFLUX, co
 
 #### getConfluxCrc20SignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `CFX_CRC20` - Conflux Token
 
@@ -937,7 +937,7 @@ String response = mDcentmanager.getConfluxCrc20SignedTransaction(CoinType.CFX_CR
 
 #### getPolkadotSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `POLKADOT` (DOT)
 
@@ -975,7 +975,7 @@ String response = mDcentmanager.getPolkadotSignedTransaction(CoinType.POLKADOT, 
 
 #### getCosmosSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `COSMOS` (ATOM)
 * `COREUM` (CORE)
@@ -1015,7 +1015,7 @@ String response = mDcentmanager.getCosmosSignedTransaction(CoinType.COSMOS, cosm
 
 #### getTezosSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `TEZOS` (XTZ)
 * `XTZ_FA`
@@ -1057,7 +1057,7 @@ String response = mDcentmanager.getTezosSignedTransaction(CoinType.TEZOS, tezosT
 
 #### getVechainSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `VECHAIN`(VET)
 * `VECHAIN_ERC20`
@@ -1096,7 +1096,7 @@ String response = mDcentmanager.getVechainSignedTransaction(CoinType.VECHAIN, ve
 
 #### getNearSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `NEAR`(NEAR)
 * `NEAR_TOKEN`
@@ -1138,7 +1138,7 @@ String response = mDcentmanager.getNearSignedTransaction(CoinType.NEAR, nearTran
 
 #### getHavahSignedTransaction
 
-**This fuction for :**
+**This function for :**
 
 * `HAVAH`(HVH)
 * `HAVAH_HSP20`(HSP20)
