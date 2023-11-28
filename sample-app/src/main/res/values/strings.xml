@@ -33,6 +33,9 @@
     <string name="list_opt_nearTokenTransaction">Near Token Transaction</string>
     <string name="list_opt_havahTransaction">Havah Transaction</string>
     <string name="list_opt_hsp20Transaction">HSP20 Transaction</string>
+    <string name="list_opt_algorandTransaction">Algorand Transaction</string>
+    <string name="list_opt_algorandAssetTransaction">Algorand Asset Transaction</string>
+    <string name="list_opt_algorandAppTransaction">Algorand App Transaction</string>
     <string name="list_opt_ethMsgSign">Eth Message Sign</string>
     <string name="list_opt_xrpUnsignedTransaction">XRP Transaction with Unsigned Tx</string>
     <string name="list_opt_getXPUB">Get XPUB</string>

@@ -238,11 +238,11 @@ Get the sign value of "EVM" message sign(personal_sign & signTypedData).
 
 **Parameters**
 
-| Parameter   | Type                                                                                                                | Description                                                                                                                                                                   |
-| ----------- | ------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| coinType    | `CoinType`                                                                                                        | coin type.                                                                                                                                                                    |
+| Parameter   | Type                                         | Description                                                                                                                                                                   |
+| ----------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| coinType    | `CoinType`                                 | coin type.                                                                                                                                                                    |
 | transaction | [EthMesageSignData](./doc/EthMesageSignData.md) | ethereum message sign data parameters.                                                                                                                                        |
-| command     | `String`                                                                                                          | data sign command.(`"msg_sign"` \| `"sign_data"`) <br /> - `"msg_sign"` for personal_sign or 'eth_sign' of EVM<br />- `"sign_data"` for signTypedData(EIP-721) of EVM |
+| command     | `String`                                   | data sign command.(`"msg_sign"` \| `"sign_data"`) <br /> - `"msg_sign"` for personal_sign or 'eth_sign' of EVM<br />- `"sign_data"` for signTypedData(EIP-721) of EVM |
 
 **Returns**
 
@@ -306,9 +306,9 @@ Depending on the coin type, the function for signing transaction and the transac
 
 **Parameters**
 
-| Parameter   | Type                                                                                                                                     | Description                     |
-| :---------- | ---------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| coinType    | `CoinType`                                                                                                                             | bitcoin coin type.              |
+| Parameter   | Type                                                              | Description                     |
+| :---------- | ----------------------------------------------------------------- | ------------------------------- |
+| coinType    | `CoinType`                                                      | bitcoin coin type.              |
 | transaction | [BitCoinTransaction](./doc/BitcoinTransaction.md#bitcointransaction) | bitcoin transaction parameters. |
 
 **Returns**
@@ -364,9 +364,9 @@ String response = mDcentManager.getBitcoinSignedTransaction(CoinType.BITCOIN, bi
 
 **Parameters**
 
-| Parameter   | Type                                                                                                                    | Description                      |
-| :---------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| coinType    | `CoinType`                                                                                                            | ethereum coin type.              |
+| Parameter   | Type                                             | Description                      |
+| :---------- | ------------------------------------------------ | -------------------------------- |
+| coinType    | `CoinType`                                     | ethereum coin type.              |
 | transaction | [EtheruemTransaction](./doc/EthereumTransaction.md) | ethereum transaction parameters. |
 
 **Returns**
@@ -406,9 +406,9 @@ String response = mDcentmanager.getEthereumSignedTransaction(CoinType.ETHEREUM, 
 
 **Parameters**
 
-| Parameter   | Type                                                                                                                | Description                     |
-| :---------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| coinType    | `CoinType`                                                                                                        | klaytn coin type.               |
+| Parameter   | Type                                         | Description                     |
+| :---------- | -------------------------------------------- | ------------------------------- |
+| coinType    | `CoinType`                                 | klaytn coin type.               |
 | transaction | [KlaytnTransaction](./doc/KlaytnTransaction.md) | klaytn transaction parameters. |
 
 **Returns**
@@ -456,9 +456,9 @@ String response = mDcentmanager.getKlaytnSignedTransaction(CoinType.KLAYTN, klay
 
 **Parameters**
 
-| Parameter   | Type                                                                                                              | Description                   |
-| :---------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| coinType    | `CoinType`                                                                                                      | erc20 type.                   |
+| Parameter   | Type                                       | Description                   |
+| :---------- | ------------------------------------------ | ----------------------------- |
+| coinType    | `CoinType`                               | erc20 type.                   |
 | transaction | [TokenTransaction](./doc/TokenTransaction.md) | token transaction parameters. |
 
 **Returns**
@@ -502,9 +502,9 @@ String response = mDcentmanager.getTokenSignedTransaction(CoinType.ERC20, erc20t
 
 **Parameters**
 
-| Parameter   | Type                                                                                                          | Description                 |
-| :---------- | ------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| coinType    | `CoinType`                                                                                                  | xrp coin type.              |
+| Parameter   | Type                                   | Description                 |
+| :---------- | -------------------------------------- | --------------------------- |
+| coinType    | `CoinType`                           | xrp coin type.              |
 | transaction | [XrpTransaction](./doc/XrpTransaction.md) | xrp transaction parameters. |
 
 **Returns**
@@ -541,9 +541,9 @@ String response = mDcentManager.getXrpSignedTransaction(CoinType.XRP, xrpTransac
 
 **Parameters**
 
-| Parameter   | Type                                                                                                          | Description                 |
-| :---------- | ------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| coinType    | `CoinType`                                                                                                  | xrp coin type.              |
+| Parameter   | Type                                   | Description                 |
+| :---------- | -------------------------------------- | --------------------------- |
+| coinType    | `CoinType`                           | xrp coin type.              |
 | transaction | [XrpTransaction](./doc/XrpTransaction.md) | xrp transaction parameters. |
 
 **Returns**
@@ -576,9 +576,9 @@ String res_accountId = response.get("accountId");
 
 **Parameters**
 
-| Parameter   | Type                                                                                                                 | Description                    |
-| :---------- | -------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| coinType    | `CoinType`                                                                                                         | binance coin type.             |
+| Parameter   | Type                                          | Description                    |
+| :---------- | --------------------------------------------- | ------------------------------ |
+| coinType    | `CoinType`                                  | binance coin type.             |
 | transaction | [BinaceTransaction](./doc/BinanceTransaction.md) | binace transaction parameters. |
 
 **Returns**
@@ -615,9 +615,9 @@ String response = mDcentmanager.getDcentManager().getBinanceSignedTransaction(Co
 
 **Parameters**
 
-| Parameter   | Type                                                                                                                  | Description                     |
-| :---------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| coinType    | `CoinType`                                                                                                          | stellar coin type.              |
+| Parameter   | Type                                           | Description                     |
+| :---------- | ---------------------------------------------- | ------------------------------- |
+| coinType    | `CoinType`                                   | stellar coin type.              |
 | transaction | [StellarTransaction](./doc/StellarTransaction.md) | stellar transaction parameters. |
 
 **Returns**
@@ -653,9 +653,9 @@ String response = mDcentmanager.getStellarSignedTransaction(CoinType.STELLAR, st
 
 **Parameters**
 
-| Parameter   | Type                                                                                                            | Description                  |
-| :---------- | --------------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| coinType    | `CoinType`                                                                                                    | tron coin type.              |
+| Parameter   | Type                                     | Description                  |
+| :---------- | ---------------------------------------- | ---------------------------- |
+| coinType    | `CoinType`                             | tron coin type.              |
 | transaction | [TronTransaction](./doc/TronTransaction.md) | tron transaction parameters. |
 
 **Returns**
@@ -690,9 +690,9 @@ String response = mDcentmanager.getTronSignedTransaction(CoinType.TRON, tronTran
 
 **Parameters**
 
-| Parameter   | Type                                                                                                                 | Description                  |
-| :---------- | -------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| coinType    | `CoinType`                                                                                                         | cardano coin type.           |
+| Parameter   | Type                                          | Description                  |
+| :---------- | --------------------------------------------- | ---------------------------- |
+| coinType    | `CoinType`                                  | cardano coin type.           |
 | transaction | [CardaonTransaction](./doc/CardanoTransacion.md) | tron transaction parameters. |
 
 **Returns**
@@ -728,9 +728,9 @@ String response = mDcentmanager.getCardanoSignedTransaction(CoinType.CARDANO, ca
 
 **Parameters**
 
-| Parameter   | Type                                                                                                                | Description                    |
-| :---------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| coinType    | `CoinType`                                                                                                        | hedera coin type.              |
+| Parameter   | Type                                         | Description                    |
+| :---------- | -------------------------------------------- | ------------------------------ |
+| coinType    | `CoinType`                                 | hedera coin type.              |
 | transaction | [HederaTransaction](./doc/HederaTransaction.md) | hedera transaction parameters. |
 
 **Returns**
@@ -768,9 +768,9 @@ String response = mDcentmanager.getHederaSignedTransaction(CoinType.HEDERA, hede
 
 **Parameters**
 
-| Parameter   | Type                                                                                                                | Description                    |
-| :---------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| coinType    | `CoinType`                                                                                                        | stacks coin type.              |
+| Parameter   | Type                                         | Description                    |
+| :---------- | -------------------------------------------- | ------------------------------ |
+| coinType    | `CoinType`                                 | stacks coin type.              |
 | transaction | [StacksTransaction](./doc/StacksTransaction.md) | stacks transaction parameters. |
 
 **Returns**
@@ -811,9 +811,9 @@ String response = mDcentmanager.getStacksSignedTransaction(CoinType.SRC20, stack
 
 **Parameters**
 
-| Parameter   | Type                                                                                                                | Description                    |
-| :---------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------ |
-| coinType    | `CoinType`                                                                                                        | solana coin type.              |
+| Parameter   | Type                                         | Description                    |
+| :---------- | -------------------------------------------- | ------------------------------ |
+| coinType    | `CoinType`                                 | solana coin type.              |
 | transaction | [SolanaTransaction](./doc/SolanaTransaction.md) | solana transaction parameters. |
 
 **Returns**
@@ -851,9 +851,9 @@ String response = mDcentmanager.getSolanaSignedTransaction(CoinType.SPL_TOKEN, s
 
 **Parameters**
 
-| Parameter   | Type                                                                                                                  | Description                     |
-| :---------- | --------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| coinType    | `CoinType`                                                                                                          | conflux coin type.              |
+| Parameter   | Type                                           | Description                     |
+| :---------- | ---------------------------------------------- | ------------------------------- |
+| coinType    | `CoinType`                                   | conflux coin type.              |
 | transaction | [ConfluxTransaction](./doc/ConfluxTransaction.md) | conflux transaction parameters. |
 
 **Returns**
@@ -894,9 +894,9 @@ String response = mDcentmanager.getConfluxSignedTransaction(CoinType.CONFLUX, co
 
 **Parameters**
 
-| Parameter   | Type                                                                                                                            | Description                           |
-| :---------- | ------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| coinType    | `CoinType`                                                                                                                    | conflux crc20 coin type.              |
+| Parameter   | Type                                                     | Description                           |
+| :---------- | -------------------------------------------------------- | ------------------------------------- |
+| coinType    | `CoinType`                                             | conflux crc20 coin type.              |
 | transaction | [ConfluxCrc20Transaction](./doc/ConfluxCrc20Transaction.md) | conflux crc20 transaction parameters. |
 
 **Returns**
@@ -943,9 +943,9 @@ String response = mDcentmanager.getConfluxCrc20SignedTransaction(CoinType.CFX_CR
 
 **Parameters**
 
-| Parameter   | Type                                                                                                                    | Description                      |
-| :---------- | ----------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| coinType    | `CoinType`                                                                                                            | polkadot coin type.              |
+| Parameter   | Type                                             | Description                      |
+| :---------- | ------------------------------------------------ | -------------------------------- |
+| coinType    | `CoinType`                                     | polkadot coin type.              |
 | transaction | [PolkadotTransaction](./doc/PolkadotTransaction.md) | polkadot transaction parameters. |
 
 **Returns**
@@ -982,9 +982,9 @@ String response = mDcentmanager.getPolkadotSignedTransaction(CoinType.POLKADOT, 
 
 **Parameters**
 
-| Parameter   | Type                                                                                                                | Description                     |
-| :---------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------- |
-| coinType    | `CoinType`                                                                                                        | cosmos coin type.               |
+| Parameter   | Type                                         | Description                     |
+| :---------- | -------------------------------------------- | ------------------------------- |
+| coinType    | `CoinType`                                 | cosmos coin type.               |
 | transaction | [CosmosTransaction](./doc/CosmosTransaction.md) | cosmos transaction parameters. |
 
 **Returns**
@@ -1024,9 +1024,9 @@ String response = mDcentmanager.getCosmosSignedTransaction(CoinType.COSMOS, cosm
 
 **Parameters**
 
-| Parameter   | Type                                                                                                              | Description                   |
-| :---------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| coinType    | `CoinType`                                                                                                      | tezos coin type.              |
+| Parameter   | Type                                       | Description                   |
+| :---------- | ------------------------------------------ | ----------------------------- |
+| coinType    | `CoinType`                               | tezos coin type.              |
 | transaction | [TezosTransaction](./doc/TezosTransaction.md) | tezos transaction parameters. |
 
 **Returns**
@@ -1064,9 +1064,9 @@ String response = mDcentmanager.getTezosSignedTransaction(CoinType.TEZOS, tezosT
 
 **Parameters**
 
-| Parameter   | Type                                                                                                                  | Description                      |
-| :---------- | --------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
-| coinType    | `CoinType`                                                                                                          | vechain coin type.               |
+| Parameter   | Type                                           | Description                      |
+| :---------- | ---------------------------------------------- | -------------------------------- |
+| coinType    | `CoinType`                                   | vechain coin type.               |
 | transaction | [VechainTransaction](./doc/VechainTransaction.md) | vechain transaction parameters. |
 
 **Returns**
@@ -1104,9 +1104,9 @@ String response = mDcentmanager.getVechainSignedTransaction(CoinType.VECHAIN, ve
 
 **Parameters**
 
-| Parameter   | Type                                                                                                            | Description                  |
-| :---------- | --------------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| coinType    | `CoinType`                                                                                                    | near coin type.              |
+| Parameter   | Type                                     | Description                  |
+| :---------- | ---------------------------------------- | ---------------------------- |
+| coinType    | `CoinType`                             | near coin type.              |
 | transaction | [NearTransaction](./doc/NearTransaction.md) | near transaction parameters. |
 
 **Returns**
@@ -1147,9 +1147,9 @@ String response = mDcentmanager.getNearSignedTransaction(CoinType.NEAR, nearTran
 
 **Parameters**
 
-| Parameter   | Type                                                                                                              | Description                   |
-| :---------- | ----------------------------------------------------------------------------------------------------------------- | ----------------------------- |
-| coinType    | `CoinType`                                                                                                      | havah coin type.              |
+| Parameter   | Type                                       | Description                   |
+| :---------- | ------------------------------------------ | ----------------------------- |
+| coinType    | `CoinType`                               | havah coin type.              |
 | transaction | [HavahTransaction](./doc/HavahTransaction.md) | havah transaction parameters. |
 
 **Returns**
@@ -1178,6 +1178,50 @@ String response = mDcentmanager.getHavahSignedTransaction(CoinType.HAVAH, havahT
 ```
 
 ---
+
+#### getAlgorandSignedTransaction
+
+**This fuction for :**
+
+* `ALGORAND`(ALGO)
+* `ALGORAND_TESTNET`(ALGO)
+* `ALGORAND_ASSET`
+* `ALGORAND_ASSET_TESTNET`
+* `ALGORAND_APP`
+* `ALGORAND_APP_TESTNET`
+
+**Parameters**
+
+| Parameter   | Type                                             | Description                      |
+| :---------- | ------------------------------------------------ | -------------------------------- |
+| coinType    | `CoinType`                                     | algorand coin type.              |
+| transaction | [AlgorandTransaction](./doc/AlgorandTransaction.md) | algorand transaction parameters. |
+
+**Returns**
+
+* `String` - signed transaction.
+
+**Requirements**
+
+* D'CENT Biometric Wallet version 2.29.1 or higher is required.
+
+**Example**
+
+```java
+String keyPath = "m/44'/283'/0'/0/0";
+AlgorandTransaction algorandTransaction;
+
+algorandTransaction = new AlgorandTransaction.Builder()
+                    .keyPath(Bip44KeyPath.valueOf(keyPath))
+                    .sigHash("54588aa3616d74cf000000174876e800a3666565cd03e8a26676ce01f60f1ca367656eac746573746e65742d76312e30a26768c4204863b518a4b3c84ec810f22d4f1081cb0f71f059a7ac20dec62f7f70e5093a22a26c76ce01f61304a46e6f7465c4084669727374205478a3726376c420568d5f7efc21a0928e50234dfa58764a84128d1c127971f6a26f350500d0ce24a3736e64c420302be92b2e5fb14e540554f3b652c0350fcc77ea53488fed81c97555179040c8a474797065a3706179")
+                    .fee("0.001")
+                    .decimals(6)
+                    .symbol("ALGO")
+                    .build();
+
+String response = mDcentmanager.getAlgorandSignedTransaction(CoinType.ALGORAND, algorandTransaction);
+```
+
 
 ## Supported Coin List
 

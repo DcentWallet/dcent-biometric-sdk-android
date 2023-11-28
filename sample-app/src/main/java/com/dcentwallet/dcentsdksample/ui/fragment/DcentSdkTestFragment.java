@@ -48,6 +48,7 @@ import com.dcentwallet.manager.comm.TronTransaction;
 import com.dcentwallet.manager.comm.UnionTransaction;
 import com.dcentwallet.manager.comm.UnspentTransactionOutput;
 import com.dcentwallet.manager.comm.VechainTransaction;
+import com.dcentwallet.manager.comm.AlgorandTransaction;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -107,6 +108,9 @@ public class DcentSdkTestFragment extends Fragment {
                 getResources().getString(R.string.list_opt_nearTokenTransaction),
                 getResources().getString(R.string.list_opt_havahTransaction),
                 getResources().getString(R.string.list_opt_hsp20Transaction),
+                getResources().getString(R.string.list_opt_algorandTransaction),
+                getResources().getString(R.string.list_opt_algorandAssetTransaction),
+                getResources().getString(R.string.list_opt_algorandAppTransaction),
                 getResources().getString(R.string.list_opt_ethMsgSign),
                 getResources().getString(R.string.list_opt_xrpUnsignedTransaction),
                 getResources().getString(R.string.list_opt_getXPUB)};
@@ -312,6 +316,21 @@ public class DcentSdkTestFragment extends Fragment {
                 {
                     Log.d(sLogTag, "list_opt_hsp20Transaction");
                     response = HSP20Transaction();
+                }
+                else if  (Objects.equals(operationItem, getResources().getString(R.string.list_opt_algorandTransaction)))
+                {
+                    Log.d(sLogTag, "list_opt_algorandTransaction");
+                    response = AlgorandTransaction();
+                }
+                else if  (Objects.equals(operationItem, getResources().getString(R.string.list_opt_algorandAssetTransaction)))
+                {
+                    Log.d(sLogTag, "list_opt_algorandAssetTransaction");
+                    response = AlgorandAssetTransaction();
+                }
+                else if  (Objects.equals(operationItem, getResources().getString(R.string.list_opt_algorandAppTransaction)))
+                {
+                    Log.d(sLogTag, "list_opt_algorandAppTransaction");
+                    response = AlgorandAppTransaction();
                 }
                 else if  (Objects.equals(operationItem, getResources().getString(R.string.list_opt_ethMsgSign)))
                 {
@@ -956,6 +975,69 @@ public class DcentSdkTestFragment extends Fragment {
         response = DcentSdkManager.getInstance().getDcentManager().getHavahSignedTransaction(CoinType.HAVAH_HSP20, hsp20Transaction);
 
         Log.i(sLogTag, "Leave [HSP20Transaction]");
+        return "response : " + response + "\n";
+    }
+
+    private String AlgorandTransaction() throws DcentException {
+        Log.i(sLogTag, "Enter [AlgorandTransaction]");
+        isProcessing = true;
+        AlgorandTransaction algorandTransaction;
+        String response;
+
+        algorandTransaction = new AlgorandTransaction.Builder()
+                .keyPath(Bip44KeyPath.valueOf("m/44'/283'/0'/0/0"))
+                .sigHash("54588aa3616d74cf000000174876e800a3666565cd03e8a26676ce01f60f1ca367656eac746573746e65742d76312e30a26768c4204863b518a4b3c84ec810f22d4f1081cb0f71f059a7ac20dec62f7f70e5093a22a26c76ce01f61304a46e6f7465c4084669727374205478a3726376c420568d5f7efc21a0928e50234dfa58764a84128d1c127971f6a26f350500d0ce24a3736e64c420302be92b2e5fb14e540554f3b652c0350fcc77ea53488fed81c97555179040c8a474797065a3706179")
+                .fee("0.001")
+                .decimals(6)
+                .symbol("ALGO")
+                .optionParam("00")
+                .build();
+
+        response = DcentSdkManager.getInstance().getDcentManager().getAlgorandSignedTransaction(CoinType.ALGORAND, algorandTransaction);
+
+        Log.i(sLogTag, "Leave [AlgorandTransaction]");
+        return "response : " + response + "\n";
+    }
+
+    private String AlgorandAssetTransaction() throws DcentException {
+        Log.i(sLogTag, "Enter [AlgorandAssetTransaction]");
+        isProcessing = true;
+        AlgorandTransaction algorandAssetTransaction;
+        String response;
+
+        algorandAssetTransaction = new AlgorandTransaction.Builder()
+                .keyPath(Bip44KeyPath.valueOf("m/44'/283'/0'/0/0"))
+                .sigHash("54588aa461616d7464a461726376c420568d5f7efc21a0928e50234dfa58764a84128d1c127971f6a26f350500d0ce24a3666565cd03e8a26676ce01f618f6a367656eac746573746e65742d76312e30a26768c4204863b518a4b3c84ec810f22d4f1081cb0f71f059a7ac20dec62f7f70e5093a22a26c76ce01f61cdea3736e64c420302be92b2e5fb14e540554f3b652c0350fcc77ea53488fed81c97555179040c8a474797065a56178666572a478616964ce11fb87c5")
+                .fee("0.001")
+                .decimals(2)
+                .symbol("DTN")
+                .optionParam("01")
+                .build();
+
+        response = DcentSdkManager.getInstance().getDcentManager().getAlgorandSignedTransaction(CoinType.ALGORAND_ASSET, algorandAssetTransaction);
+
+        Log.i(sLogTag, "Leave [AlgorandAssetTransaction]");
+        return "response : " + response + "\n";
+    }
+
+    private String AlgorandAppTransaction() throws DcentException {
+        Log.i(sLogTag, "Enter [AlgorandAppTransaction]");
+        isProcessing = true;
+        AlgorandTransaction algorandAppTransaction;
+        String response;
+
+        algorandAppTransaction = new AlgorandTransaction.Builder()
+                .keyPath(Bip44KeyPath.valueOf("m/44'/283'/0'/0/0"))
+                .sigHash("545889a46170616191c43a5475652053657020313220323032332031353a34303a343220474d542b303930302028eb8c80ed959cebafbceab5ad20ed919ceca480ec8b9c29a461706964ce068fee9aa3666565cd03e8a26676ce01f6204fa367656eac746573746e65742d76312e30a26768c4204863b518a4b3c84ec810f22d4f1081cb0f71f059a7ac20dec62f7f70e5093a22a26c76ce01f62437a3736e64c420568d5f7efc21a0928e50234dfa58764a84128d1c127971f6a26f350500d0ce24a474797065a46170706c")
+                .fee("0.001")
+                .decimals(2)
+                .symbol("DTN")
+                .optionParam("03")
+                .build();
+
+        response = DcentSdkManager.getInstance().getDcentManager().getAlgorandSignedTransaction(CoinType.ALGORAND_APP, algorandAppTransaction);
+
+        Log.i(sLogTag, "Leave [AlgorandAppTransaction]");
         return "response : " + response + "\n";
     }
 

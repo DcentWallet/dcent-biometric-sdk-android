@@ -14,7 +14,6 @@ import com.dcentwallet.manager.DcentException;
 import com.dcentwallet.manager.DcentManager;
 import com.dcentwallet.manager.comm.Bip44KeyPath;
 import com.dcentwallet.manager.comm.CoinType;
-import com.dcentwallet.manager.comm.HavahTransaction;
 import com.dcentwallet.manager.comm.KlaytnTransaction;
 import com.dcentwallet.manager.comm.KlaytnTxType;
 import com.dcentwallet.wam.LOG;

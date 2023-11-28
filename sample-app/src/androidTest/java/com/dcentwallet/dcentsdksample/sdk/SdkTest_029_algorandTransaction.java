@@ -14,7 +14,7 @@ import com.dcentwallet.manager.DcentException;
 import com.dcentwallet.manager.DcentManager;
 import com.dcentwallet.manager.comm.Bip44KeyPath;
 import com.dcentwallet.manager.comm.CoinType;
-import com.dcentwallet.manager.comm.EthMesageSignData;
+import com.dcentwallet.manager.comm.AlgorandTransaction;
 import com.dcentwallet.wam.LOG;
 
 import org.junit.AfterClass;
@@ -26,10 +26,8 @@ import org.junit.Test;
 import org.junit.rules.TestName;
 import org.junit.runners.MethodSorters;
 
-import java.util.HashMap;
-
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class SdkTest_028_eth_msg_sign {
+public class SdkTest_029_algorandTransaction {
 
     private static Context appContext;
     private static boolean isConnected = false;
@@ -114,7 +112,7 @@ public class SdkTest_028_eth_msg_sign {
     }
 
     @Test
-    public void Test_002_msgSign_personalSign() {
+    public void Test_002_algorandTransaction() {
         initDongleConnect();
 
         if( !isConnected ){
@@ -123,19 +121,22 @@ public class SdkTest_028_eth_msg_sign {
         }
 
         try{
-            EthMesageSignData ethMesageSignData;
-            ethMesageSignData = new EthMesageSignData.Builder()
-                    .keyPath(Bip44KeyPath.valueOf("m/44'/60'/0'/0/0"))
-                    .data("Message Sign TEST")
+            String keyPath = "m/44'/283'/0'/0/0";
+            AlgorandTransaction algorandTransaction;
+            String response;
+
+            algorandTransaction = new AlgorandTransaction.Builder()
+                    .keyPath(Bip44KeyPath.valueOf(keyPath))
+                    .sigHash("54588aa3616d74cf000000174876e800a3666565cd03e8a26676ce01f60f1ca367656eac746573746e65742d76312e30a26768c4204863b518a4b3c84ec810f22d4f1081cb0f71f059a7ac20dec62f7f70e5093a22a26c76ce01f61304a46e6f7465c4084669727374205478a3726376c420568d5f7efc21a0928e50234dfa58764a84128d1c127971f6a26f350500d0ce24a3736e64c420302be92b2e5fb14e540554f3b652c0350fcc77ea53488fed81c97555179040c8a474797065a3706179")
+                    .fee("0.001")
+                    .decimals(6)
+                    .symbol("ALGO")
+                    .optionParam("00")
                     .build();
 
-            HashMap<String, String> response = dcentSdkManager.getDcentManager().getEthereumMessageSigned(CoinType.ETHEREUM, ethMesageSignData, "msg_sign");
+            response = dcentSdkManager.getDcentManager().getAlgorandSignedTransaction(CoinType.ALGORAND, algorandTransaction);
 
             assertNotNull(response);
-            String address = response.get("address");
-            String sign = response.get("sign");
-            assertTrue(address.startsWith("0x"));
-            assertNotNull(sign);
         }catch (DcentException dex){
             LOG.d("DcentException Code : " + Integer.toHexString(dex.get_err_code()).toUpperCase());
             fail();
@@ -143,7 +144,7 @@ public class SdkTest_028_eth_msg_sign {
     }
 
     @Test
-    public void Test_003_msgSign_typed() {
+    public void Test_003_algorandAssetTransaction() {
         initDongleConnect();
 
         if( !isConnected ){
@@ -152,19 +153,54 @@ public class SdkTest_028_eth_msg_sign {
         }
 
         try{
-            EthMesageSignData ethMesageSignData;
-            ethMesageSignData = new EthMesageSignData.Builder()
-                    .keyPath(Bip44KeyPath.valueOf("m/44'/60'/0'/0/0"))
-                    .data("0xdeadbeafdeadbeafdeadbeafdeadbeaf")
+            String keyPath = "m/44'/283'/0'/0/0";
+            AlgorandTransaction algorandAssetTransaction;
+            String response;
+
+            algorandAssetTransaction = new AlgorandTransaction.Builder()
+                    .keyPath(Bip44KeyPath.valueOf(keyPath))
+                    .sigHash("54588aa461616d7464a461726376c420568d5f7efc21a0928e50234dfa58764a84128d1c127971f6a26f350500d0ce24a3666565cd03e8a26676ce01f618f6a367656eac746573746e65742d76312e30a26768c4204863b518a4b3c84ec810f22d4f1081cb0f71f059a7ac20dec62f7f70e5093a22a26c76ce01f61cdea3736e64c420302be92b2e5fb14e540554f3b652c0350fcc77ea53488fed81c97555179040c8a474797065a56178666572a478616964ce11fb87c5")
+                    .fee("0.001")
+                    .decimals(2)
+                    .symbol("DTN")
+                    .optionParam("01")
                     .build();
 
-            HashMap<String, String> response = dcentSdkManager.getDcentManager().getEthereumMessageSigned(CoinType.ETHEREUM, ethMesageSignData, "sign_data");
+            response = dcentSdkManager.getDcentManager().getAlgorandSignedTransaction(CoinType.ALGORAND_ASSET, algorandAssetTransaction);
 
             assertNotNull(response);
-            String address = response.get("address");
-            String sign = response.get("sign");
-            assertTrue(address.startsWith("0x"));
-            assertNotNull(sign);
+        }catch (DcentException dex){
+            LOG.d("DcentException Code : " + Integer.toHexString(dex.get_err_code()).toUpperCase());
+            fail();
+        }
+    }
+
+    @Test
+    public void Test_004_algorandAppTransaction() {
+        initDongleConnect();
+
+        if( !isConnected ){
+            LOG.d("Dongle is not connected");
+            fail();
+        }
+
+        try{
+            String keyPath = "m/44'/283'/0'/0/0";
+            AlgorandTransaction algorandAppTransaction;
+            String response;
+
+            algorandAppTransaction = new AlgorandTransaction.Builder()
+                    .keyPath(Bip44KeyPath.valueOf(keyPath))
+                    .sigHash("545889a46170616191c43a5475652053657020313220323032332031353a34303a343220474d542b303930302028eb8c80ed959cebafbceab5ad20ed919ceca480ec8b9c29a461706964ce068fee9aa3666565cd03e8a26676ce01f6204fa367656eac746573746e65742d76312e30a26768c4204863b518a4b3c84ec810f22d4f1081cb0f71f059a7ac20dec62f7f70e5093a22a26c76ce01f62437a3736e64c420568d5f7efc21a0928e50234dfa58764a84128d1c127971f6a26f350500d0ce24a474797065a46170706c")
+                    .fee("0.001")
+                    .decimals(2)
+                    .symbol("DTN")
+                    .optionParam("03")
+                    .build();
+
+            response = dcentSdkManager.getDcentManager().getAlgorandSignedTransaction(CoinType.ALGORAND_APP, algorandAppTransaction);
+
+            assertNotNull(response);
         }catch (DcentException dex){
             LOG.d("DcentException Code : " + Integer.toHexString(dex.get_err_code()).toUpperCase());
             fail();

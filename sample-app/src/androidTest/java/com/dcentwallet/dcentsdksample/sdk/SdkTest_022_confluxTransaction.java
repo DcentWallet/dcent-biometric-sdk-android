@@ -16,7 +16,6 @@ import com.dcentwallet.manager.comm.Bip44KeyPath;
 import com.dcentwallet.manager.comm.CoinType;
 import com.dcentwallet.manager.comm.ConfluxCrc20Transaction;
 import com.dcentwallet.manager.comm.ConfluxTransaction;
-import com.dcentwallet.manager.comm.HavahTransaction;
 import com.dcentwallet.wam.LOG;
 
 import org.junit.AfterClass;
